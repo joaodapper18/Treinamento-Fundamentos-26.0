@@ -1,1 +1,54 @@
-/* Estilos css aqui! */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a0033; 
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #2d0059; 
+    border-bottom: 4px solid #ff007f; 
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff007f; 
+}
+
+.nav-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+
+.product-card {
+    background-color: #3d007a;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ff007f; 
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05); 
+}
