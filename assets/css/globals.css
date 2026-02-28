@@ -9,24 +9,72 @@ body {
     color: #ffffff; 
     font-family: 'Arial', sans-serif;
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: #2d0059; 
-    border-bottom: 4px solid #ff007f; 
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 .logo span {
     color: #ff007f; 
 }
 
+.logo-texto {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #2d0059;
+    border-bottom: 4px solid #ff007f;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mascote-x {
+    background-color: #ff007f;
+    color: #1a0033;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.4rem;
+    box-shadow: 0 0 10px #ff007f;
+    position: relative;
+}
+
+.mascote-x::after {
+    content: "🕶️";
+    position: absolute;
+    top: -8px;
+    font-size: 0.9rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.carrinho {
+    font-size: 1.2rem;
+    background: #3d007a;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #ff007f;
+}
+
+#cart-count {
+    color: #ff007f;
+    font-weight: bold;
+    margin-left: 5px;
+}
 .nav-info {
     display: flex;
     gap: 20px;
@@ -39,15 +87,50 @@ body {
     padding: 40px 5%;
 }
 
+.product-card:hover {
+    transform: scale(1.05); 
+}
+
+.product-card button + button {
+    margin-top: 10px; 
+}
 .product-card {
     background-color: #3d007a;
+    border: 2px solid #ff007f;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    border: 2px solid #ff007f; 
     transition: transform 0.3s;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 520px; 
 }
 
-.product-card:hover {
-    transform: scale(1.05); 
+.product-card h3, .product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    margin-top: auto; 
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.product-card button {
+    background-color: #000000; 
+    color: #ffffff;            
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;              
+    margin-bottom: 8px;       
+    transition: background-color 0.2s;
+}
+
+.product-card button:hover {
+    background-color: #222222; 
 }
